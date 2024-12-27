@@ -1,0 +1,70 @@
+$color-green: #b0ed69;
+$color-orange: #f2c370;
+$color-white: #f7fafe;
+$color-blue: #5d68ed;
+$color-black: #18181c;
+$color-light-purple: #c1b9fc;
+$color-purple: #d38bf1;
+$color-pale-purple: #ebecfe;
+$link-size: 1rem;
+$logo-size: 1.8rem;
+
+$h1-size: 3.2rem;
+$h2-size: 2.4rem;
+$h3-size: 1.6rem;
+$h4-size: 1rem;
+$text-24: 1.2rem;
+$text-20: 1rem;
+$text-18: 0.9rem;
+$text-16: 0.8rem;
+
+$title-lh: 110%;
+$main-text-lh: 110%;
+
+$header-height: 125px;
+
+$font-size: 20px;
+
+:root {
+    --color-green: #{$color-green};
+    --color-orange: #{$color-orange};
+    --color-white: #{$color-white};
+    --color-blue: #{$color-blue};
+    --color-black: #{$color-black};
+    --color-light-purple: #{$color-light-purple};
+    --color-purple: #{$color-purple};
+    --color-pale-purple: #{$color-pale-purple};
+    --link-size: #{$link-size};
+    --logo-size: #{$logo-size};
+
+    --h1-size: #{$h1-size};
+    --h2-size: #{$h2-size};
+    --h3-size: #{$h3-size};
+    --h4-size: #{$h4-size};
+    --text-24: #{$text-24};
+    --text-20: #{$text-20};
+    --text-18: #{$text-18};
+    --text-16: #{$text-16};
+
+    --title-lh: #{$title-lh};
+    --main-text-lh: #{$main-text-lh};
+
+    --header-height: #{$header-height};
+
+    font-size: #{$font-size};
+
+    @media screen and (max-width: 1600px) {
+        font-size: 18px;
+    }
+
+    @media screen and (max-width: 1600px) {
+        font-size: 16px;
+    }
+}
+
+body {
+    font-family: "Mulish", sans-serif;
+    font-weight: 500;
+    background-color: var(--color-white);
+    color: var(--color-black);
+}

@@ -1,0 +1,14 @@
+.custom-card {
+    width: 325px;
+    height: 420px;
+    background-color: var(--color-white);
+    border-radius: 5px;
+    padding: 20px;
+
+    flex-shrink: 0;
+
+    color: var(--color-black);
+
+    display: flex;
+    flex-direction: column;
+}

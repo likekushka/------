@@ -1,0 +1,13 @@
+{
+    "printWidth": 120,
+    "tabWidth": 4,
+    "bracketSameLine": true,
+    "overrides": [
+        {
+            "files": "*.js",
+            "options": {
+                "printWidth": 60
+            }
+        }
+    ]
+}

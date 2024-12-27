@@ -1,0 +1,35 @@
+.btn {
+    padding: 0 25px;
+}
+
+.btn-size_m {
+    height: 50px;
+}
+
+.btn-size_lg {
+    height: 60px;
+}
+
+.btn-primary {
+    background-color: var(--color-green);
+    color: var(--color-black);
+    font-size: var(--link-size);
+    font-weight: bold;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-orange);
+    color: var(--color-black);
+}
+
+.btn-primary:focus,
+.btn-primary:active {
+    background-color: var(--color-green);
+    color: var(--color-black);
+}
+
+.btn.btn:active {
+    background-color: var(--color-blue);
+    border-color: var(--color-blue);
+}

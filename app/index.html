@@ -13,10 +13,11 @@
             href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
             rel="stylesheet"
         />
-        <script src="node_modules/@splidejs/splide/dist/js/splide.min.js"></script>
-        <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="node_modules/@splidejs/splide/dist/css/splide.min.css" />
-        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css" />
+        <script src="../node_modules/@splidejs/splide/dist/js/splide.min.js"></script>
+        <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="../node_modules/normalize.css/normalize.css" />
+        <link rel="stylesheet" href="../node_modules/@splidejs/splide/dist/css/splide.min.css" />
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css" />
         <link rel="stylesheet" href="style/style.css" />
     </head>
     <body>
@@ -24,11 +25,11 @@
             <div class="container-xxl header__container">
                 <nav class="navbar navbar-expand-lg">
                     <div class="container-fluid">
-                        <a href="#" class="navbar-brand"> <span class="color-green">Net</span>School </a>
+                        <a href="./index.html" class="navbar-brand"><span class="color-green">Net</span>School</a>
                         <div class="navbar-collapse collapse" id="headerNavbarContent">
                             <ul class="navbar-nav justify-content-between ms-auto me-auto">
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">Портфолио</a>
+                                    <a href="./portfolio.html" class="nav-link">Портфолио</a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="#" class="nav-link">Команда</a>
@@ -50,7 +51,7 @@
         </header>
         <section class="hero">
             <div class="hero__container container-xxl h-100">
-                <h1 class="title1 hero__title">NetSchool - это не&nbsp;школа, это IT&#8209;приключение!</h1>
+                <h1 class="hero__title">NetSchool - это не&nbsp;школа, это IT&#8209;приключение!</h1>
                 <p class="text__24 hero__text">
                     Осваивайте программирование и&nbsp;цифровые навыки, создавая реальные проекты. Курсы для&nbsp;детей
                     от&nbsp;7 до 16 лет.
@@ -60,10 +61,10 @@
                 </button>
             </div>
         </section>
-        <section class="perspectives bg-color-blue">
-            <div class="perspectives__container container-xxl tti-container h-100">
-                <h2 class="title2 perspectives__title">Перспективы</h2>
-                <p class="text__24 perspectives__text">
+        <section class="perspectives media-block bg-color-blue">
+            <div class="container-xxl tti-container h-100">
+                <h2>Перспективы</h2>
+                <p class="text__24 media-block__text">
                     Наши ученики не только осваивают программирование и цифровые навыки, но и создают реальные проекты,
                     которые могут стать основой для их будущей карьеры в IT. <br /><br />
                     Помогите вашему ребенку сделать первый шаг к перспективной профессии уже сегодня!
@@ -76,7 +77,7 @@
         </section>
         <section class="review">
             <div class="review__container container-xxl h-100">
-                <h2 class="title2 review__title">Отзывы</h2>
+                <h2 class="review__title">Отзывы</h2>
                 <div class="slider-container splide" id="reviewSlider">
                     <div class="splide__track review__track" id="reviewTrack">
                         <ul class="review__carousel splide__list">
@@ -316,7 +317,7 @@
         </section>
         <section class="courses bg-color-blue">
             <div class="container-xxl courses__container h-100">
-                <h2 class="title2 courses__title">Наши курсы</h2>
+                <h2 class="courses__title">Наши курсы</h2>
                 <ul class="courses-list">
                     <li>
                         <div
@@ -461,10 +462,10 @@
                 </ul>
             </div>
         </section>
-        <section class="platform">
-            <div class="container-xxl platform__container tti-container">
-                <h2 class="title2 platform__title">Наша платформа</h2>
-                <p class="text__24 platform__text">
+        <section class="platform media-block media-block_sub-left">
+            <div class="container-xxl tti-container">
+                <h2>Наша платформа</h2>
+                <p class="text__24 media-block__text">
                     NetSchool — это интерактивная онлайн-платформа для детей и подростков от 7 до 16 лет, где они могут
                     изучать IT.
                     <br /><br />
@@ -475,15 +476,15 @@
                 </p>
                 <div class="imgs-container">
                     <div class="img-placeholder"></div>
-                    <img src="img/platform__sub-img.png" alt="" class="img sub-img platform__sub-img" />
+                    <img src="img/platform__sub-img.png" alt="" class="img sub-img" />
                 </div>
             </div>
         </section>
-        <section id="registrationForm" class="registration bg-color-blue">
+        <section id="registrationForm" class="registration media-block bg-color-blue">
             <div class="container-xxl registration-container tti-container h-100">
-                <h2 class="title2 registration__title">Запишитесь на пробный урок</h2>
+                <h2>Запишитесь на пробный урок</h2>
                 <form class="registration__form form">
-                    <div class="registration-inputs">
+                    <div class="inputs-container">
                         <div class="form-floating">
                             <input
                                 type="text"
@@ -516,13 +517,13 @@
                 </form>
                 <div class="imgs-container registration__imgs-container">
                     <div class="img-placeholder registration-img"></div>
-                    <img src="img/registration__sub-img.png" alt="" class="img sub-img registration__sub-img" />
+                    <img src="img/registration__sub-img.png" alt="" class="img sub-img" />
                 </div>
             </div>
         </section>
         <footer class="footer">
             <div class="container-xxl footer__container">
-                <nav class="footer__navbar navbar navbar-expand-lg">
+                <nav class="navbar navbar-expand-lg">
                     <div class="container-fluid">
                         <a href="#" class="navbar-brand footer__brand"> <span class="color-green">Net</span>School </a>
                         <div class="navbar-collapse collapse" id="footerNavbarContent">
@@ -579,64 +580,48 @@
                             </p>
                         </div>
                         <div class="course-card__gallery">
-                            <h3 class="title3 course-gallery__title">Работы наших учеников</h3>
+                            <h3 class="course-gallery__title">Работы наших учеников</h3>
                             <div class="slider-container splide" id="courseModalSlider">
                                 <div class="splide__track course-card__track" id="courseModalTrack">
                                     <ul class="course-card__carousel splide__list">
                                         <li class="student-work-card student-work-card_small splide__slide">
                                             <header class="student-work-card__header">
-                                                <h2 class="title4 student-work-card__title">Софья Рыбина</h2>
+                                                <h4 class="student-work-card__title">Софья Рыбина</h4>
                                                 <h6 class="student-work-card__subtitle">10 лет</h6>
                                             </header>
                                             <div class="student-work-card__body">
-                                                <p class="student-work-card__work-name title4">
-                                                    Игра “Путешествие по джунглям"
-                                                </p>
-                                                <p class="student-work-card__course-name title4">
-                                                    Scratch: Создатель игр
-                                                </p>
+                                                <p>Игра “Путешествие по джунглям"</p>
+                                                <p>Scratch: Создатель игр</p>
                                             </div>
                                         </li>
                                         <li class="student-work-card student-work-card_small splide__slide">
                                             <header class="student-work-card__header">
-                                                <h2 class="title4 student-work-card__title">Софья Рыбина</h2>
+                                                <h4 class="student-work-card__title">Софья Рыбина</h4>
                                                 <h6 class="student-work-card__subtitle">10 лет</h6>
                                             </header>
                                             <div class="student-work-card__body">
-                                                <p class="student-work-card__work-name title4">
-                                                    Игра “Путешествие по джунглям"
-                                                </p>
-                                                <p class="student-work-card__course-name title4">
-                                                    Scratch: Создатель игр
-                                                </p>
+                                                <p>Игра “Путешествие по джунглям"</p>
+                                                <p>Scratch: Создатель игр</p>
                                             </div>
                                         </li>
                                         <li class="student-work-card student-work-card_small splide__slide">
                                             <header class="student-work-card__header">
-                                                <h2 class="title4 student-work-card__title">Софья Рыбина</h2>
+                                                <h4 class="student-work-card__title">Софья Рыбина</h4>
                                                 <h6 class="student-work-card__subtitle">10 лет</h6>
                                             </header>
                                             <div class="student-work-card__body">
-                                                <p class="student-work-card__work-name title4">
-                                                    Игра “Путешествие по джунглям"
-                                                </p>
-                                                <p class="student-work-card__course-name title4">
-                                                    Scratch: Создатель игр
-                                                </p>
+                                                <p>Игра “Путешествие по джунглям"</p>
+                                                <p>Scratch: Создатель игр</p>
                                             </div>
                                         </li>
                                         <li class="student-work-card student-work-card_small splide__slide">
                                             <header class="student-work-card__header">
-                                                <h2 class="title4 student-work-card__title">Софья Рыбина</h2>
+                                                <h4 class="student-work-card__title">Софья Рыбина</h4>
                                                 <h6 class="student-work-card__subtitle">10 лет</h6>
                                             </header>
                                             <div class="student-work-card__body">
-                                                <p class="student-work-card__work-name title4">
-                                                    Игра “Путешествие по джунглям"
-                                                </p>
-                                                <p class="student-work-card__course-name title4">
-                                                    Scratch: Создатель игр
-                                                </p>
+                                                <p>Игра “Путешествие по джунглям"</p>
+                                                <p>Scratch: Создатель игр</p>
                                             </div>
                                         </li>
                                     </ul>

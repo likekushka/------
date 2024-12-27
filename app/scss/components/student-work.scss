@@ -1,0 +1,36 @@
+.student-work-card {
+    width: 690px;
+    height: 390px;
+
+    margin-right: 60px;
+    padding: 25px 25px 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background-color: var(--color-pale-purple);
+
+    border-radius: 5px;
+
+    font-size: 1rem;
+}
+
+.student-work-card_small {
+    width: 580px;
+    height: 325px;
+}
+
+.student-work-card__subtitle {
+    font-size: 0.8em;
+}
+
+.student-work-card__body {
+    p {
+        font-weight: bold;
+
+        &:first-child {
+            margin-bottom: 0.25em;
+        }
+    }
+}
