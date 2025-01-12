@@ -1,0 +1,16 @@
+@use "../base/variables" as *;
+@use "../mixins/set-page-theme" as *;
+
+.page-portfolio {
+    @include set-page-theme($color-orange);
+
+    .hero {
+        background-image: $portfolio-hero;
+    }
+}
+
+.projects {
+    h2 {
+        margin-bottom: 35px;
+    }
+}

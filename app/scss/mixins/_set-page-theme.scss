@@ -1,0 +1,32 @@
+@use "../base/variables" as *;
+
+@mixin set-page-theme($theme-color) {
+    .nav-link.disabled,
+    .net {
+        color: $theme-color;
+    }
+
+    .btn-primary {
+        background-color: $theme-color;
+
+        &:hover {
+            @if $theme-color == $color-orange {
+                background-color: var(--color-green);
+            } @else {
+                background-color: var(--color-orange);
+            }
+        }
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $theme-color;
+
+        &:hover {
+            @if $theme-color == $color-orange {
+                background-color: var(--color-green);
+            } @else {
+                background-color: var(--color-orange);
+            }
+        }
+    }
+}

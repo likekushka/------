@@ -1,6 +1,8 @@
-const courseCards = Array.from(document.querySelectorAll(".course-card"));
+const cards = Array.from(
+    document.querySelectorAll(".modal-card"),
+);
 
-let courseModalSlider = new Splide("#courseModalSlider", {
+let modalSlider = new Splide("#modalSlider", {
     type: "loop",
     classes: {
         pagination: "splide__pagination d-none",
@@ -18,10 +20,10 @@ let courseModalSlider = new Splide("#courseModalSlider", {
     },
 });
 
-courseModalSlider.mount();
+modalSlider.mount();
 
-courseCards.forEach((courseCard) => {
+cards.forEach((courseCard) => {
     courseCard.addEventListener("click", () => {
-        setTimeout(() => courseModalSlider.refresh(), 200);
+        setTimeout(() => modalSlider.refresh(), 200);
     });
 });

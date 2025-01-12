@@ -4,15 +4,13 @@
         <meta charset="UTF-8" />
         <meta
             name="viewport"
-            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-        />
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
         <title>NetSchool: Наше портфолио</title>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
             href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
-            rel="stylesheet"
-        />
+            rel="stylesheet" />
         <script src="../node_modules/@splidejs/splide/dist/js/splide.min.js"></script>
         <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="../node_modules/normalize.css/normalize.css" />
@@ -20,25 +18,25 @@
         <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css" />
         <link rel="stylesheet" href="style/style.css" />
     </head>
-    <body>
+    <body class="page-portfolio">
         <header class="header">
             <div class="container-xxl header__container">
                 <nav class="navbar navbar-expand-lg">
                     <div class="container-fluid">
-                        <a href="#" class="navbar-brand"> <span class="color-orange">Net</span>School </a>
+                        <a href="./index.html" class="navbar-brand"> <span class="net">Net</span>School </a>
                         <div class="navbar-collapse collapse" id="headerNavbarContent">
                             <ul class="navbar-nav justify-content-between ms-auto me-auto">
                                 <li class="nav-item">
-                                    <a href="./portfolio.html" class="nav-link">Портфолио</a>
+                                    <a href="./portfolio.html" class="nav-link disabled">Портфолио</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">Команда</a>
+                                    <a href="./team.html" class="nav-link">Команда</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">О нас</a>
+                                    <a href="./about.html" class="nav-link">О нас</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">Контакты</a>
+                                    <a href="./contacts.html" class="nav-link">Контакты</a>
                                 </li>
                             </ul>
                             <button class="btn nav-btn btn-primary btn-size_m">
@@ -49,67 +47,137 @@
                 </nav>
             </div>
         </header>
-        <section id="registrationForm" class="registration media-block bg-color-blue">
-            <div class="container-xxl registration-container tti-container h-100">
-                <h2>Запишитесь на пробный урок</h2>
-                <form class="registration__form form">
-                    <div class="inputs-container">
-                        <div class="form-floating">
-                            <input
-                                type="text"
-                                class="form-control registration__input"
-                                id="nameInput"
-                                placeholder="Имя"
-                            />
-                            <label for="nameInput" class="label">Имя</label>
-                        </div>
-                        <div class="form-floating">
-                            <input
-                                type="text"
-                                class="form-control registration__input"
-                                id="surnameInput"
-                                placeholder="Фамилия"
-                            />
-                            <label for="surnameInput" class="label">Фамилия</label>
-                        </div>
-                        <div class="form-floating">
-                            <input
-                                type="tel"
-                                class="form-control registration__input"
-                                id="telInput"
-                                placeholder="Номер телефона"
-                            />
-                            <label for="telInput" class="label">Номер телефона</label>
-                        </div>
-                    </div>
-                    <button type="submit" class="btn btn-primary registration__btn">Записаться</button>
-                </form>
-                <div class="imgs-container registration__imgs-container">
-                    <div class="img-placeholder registration-img"></div>
-                    <img src="img/registration__sub-img.png" alt="" class="img sub-img" />
+        <main>
+            <section class="hero">
+                <div class="hero__container container-xxl">
+                    <h1 class="hero__title">Портфолио наших учеников</h1>
+                    <p class="hero__text">
+                        В NetSchool дети не только учатся, но и создают реальные проекты — от игр и сайтов до первых
+                        программ и дизайнов.
+                    </p>
+                    <button class="btn btn-primary btn-size_lg align-self-start">
+                        <a href="#registrationForm">Записаться бесплатно</a>
+                    </button>
                 </div>
-            </div>
-        </section>
+            </section>
+            <section class="projects bg-color-blue">
+                <div class="projects__container container-xxl">
+                    <h2>Проекты наших учеников</h2>
+                    <ul class="cards-tile-list">
+                        <li
+                            class="project-card modal-card splide__slide"
+                            data-bs-toggle="modal"
+                            data-bs-target="#portfolioModal">
+                            <header class="project-card__header">
+                                <h4 class="project-card__title">Софья Рыбина</h4>
+                                <h6 class="project-card__subtitle">10 лет</h6>
+                            </header>
+                            <div class="project-card__body">
+                                <p>Игра “Путешествие по джунглям"</p>
+                                <p>Scratch: Создатель игр</p>
+                            </div>
+                        </li>
+                        <li
+                            class="project-card modal-card splide__slide"
+                            data-bs-toggle="modal"
+                            data-bs-target="#portfolioModal">
+                            <header class="project-card__header">
+                                <h4 class="project-card__title">Софья Рыбина</h4>
+                                <h6 class="project-card__subtitle">10 лет</h6>
+                            </header>
+                            <div class="project-card__body">
+                                <p>Игра “Путешествие по джунглям"</p>
+                                <p>Scratch: Создатель игр</p>
+                            </div>
+                        </li>
+                        <li
+                            class="project-card modal-card splide__slide"
+                            data-bs-toggle="modal"
+                            data-bs-target="#portfolioModal">
+                            <header class="project-card__header">
+                                <h4 class="project-card__title">Софья Рыбина</h4>
+                                <h6 class="project-card__subtitle">10 лет</h6>
+                            </header>
+                            <div class="project-card__body">
+                                <p>Игра “Путешествие по джунглям"</p>
+                                <p>Scratch: Создатель игр</p>
+                            </div>
+                        </li>
+                        <li
+                            class="project-card modal-card splide__slide"
+                            data-bs-toggle="modal"
+                            data-bs-target="#portfolioModal">
+                            <header class="project-card__header">
+                                <h4 class="project-card__title">Софья Рыбина</h4>
+                                <h6 class="project-card__subtitle">10 лет</h6>
+                            </header>
+                            <div class="project-card__body">
+                                <p>Игра “Путешествие по джунглям"</p>
+                                <p>Scratch: Создатель игр</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section id="registrationForm" class="registration media">
+                <div class="container-xxl registration-container">
+                    <div class="imgs-container registration__imgs-container">
+                        <img src="img/main/registration.png" alt="" class="img" />
+                        <img src="img/sub/registration.png" alt="" class="sub-img" />
+                    </div>
+                    <h2>Запишитесь на пробный урок</h2>
+                    <form class="registration__form form">
+                        <div class="inputs-container">
+                            <div class="form-floating">
+                                <input
+                                    type="text"
+                                    class="form-control registration__input"
+                                    id="nameInput"
+                                    placeholder="Имя" />
+                                <label for="nameInput" class="label">Имя</label>
+                            </div>
+                            <div class="form-floating">
+                                <input
+                                    type="text"
+                                    class="form-control registration__input"
+                                    id="surnameInput"
+                                    placeholder="Фамилия" />
+                                <label for="surnameInput" class="label">Фамилия</label>
+                            </div>
+                            <div class="form-floating">
+                                <input
+                                    type="tel"
+                                    class="form-control registration__input"
+                                    id="telInput"
+                                    placeholder="Номер телефона" />
+                                <label for="telInput" class="label">Номер телефона</label>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary registration__btn">Записаться</button>
+                    </form>
+                </div>
+            </section>
+        </main>
         <footer class="footer">
             <div class="container-xxl footer__container">
                 <nav class="navbar navbar-expand-lg">
                     <div class="container-fluid">
                         <a href="./index.html" class="navbar-brand footer__brand">
-                            <span class="color-orange">Net</span>School
+                            <span class="net">Net</span>School
                         </a>
                         <div class="navbar-collapse collapse" id="footerNavbarContent">
                             <ul class="navbar-nav justify-content-between ms-auto">
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">Портфолио</a>
+                                    <a href="./portfolio.html" class="nav-link disabled">Портфолио</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">Команда</a>
+                                    <a href="./team.html" class="nav-link">Команда</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">О нас</a>
+                                    <a href="./about.html" class="nav-link">О нас</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">Контакты</a>
+                                    <a href="./contacts.html" class="nav-link">Контакты</a>
                                 </li>
                             </ul>
                         </div>
@@ -118,5 +186,94 @@
                 <p class="copyright">&copy; 2024 Все права защищены ООО “NetSchool”</p>
             </div>
         </footer>
+        <section class="portfolio-modal modal fade" aria-hidden="true" id="portfolioModal">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <header class="modal__header tti-container">
+                        <h1 class="modal__title title1">Игра “Путешествие по джунглям"</h1>
+                        <h6 class="modal__subtitle">София Рыбина, 11 лет</h6>
+                        <button
+                            type="button"
+                            class="btn-close modal-btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </header>
+                    <div class="modal-body">
+                        <div class="modal__text">
+                            <p>
+                                София создала игру, в которой игрок исследует волшебный мир, собирает ресурсы и
+                                сражается с монстрами. Для разработки она использовала Scratch, научившись добавлять
+                                персонажей, анимацию и создавать простые игровые механики.
+                            </p>
+                            <strong class="fst-italic">
+                                “Я всегда хотела создать свою игру! Теперь я знаю, как придумывать персонажей и делать
+                                их живыми. Спасибо NetSchool за то, что показали, как это сделать!”
+                            </strong>
+                        </div>
+                        <div class="modal__gallery">
+                            <h3 class="modal-gallery__title">Галерея проекта</h3>
+                            <div class="slider-container splide" id="modalSlider">
+                                <div class="splide__track modal-gallery__track" id="modalTrack">
+                                    <ul class="modal-gallery__carousel splide__list">
+                                        <li
+                                            class="project-card project-card_small project-card_carousel splide__slide"></li>
+                                        <li
+                                            class="project-card project-card_small project-card_carousel splide__slide"></li>
+                                        <li
+                                            class="project-card project-card_small project-card_carousel splide__slide"></li>
+                                        <li
+                                            class="project-card project-card_small project-card_carousel splide__slide"></li>
+                                    </ul>
+                                </div>
+                                <div class="splide__arrows splide__arrows--ltr">
+                                    <button
+                                        class="btn gallery-btn gallery-btn_prev modal-gallery__btn_prev splide__arrow splide__arrow--prev"
+                                        type="button"
+                                        aria-label="Previous slide"
+                                        aria-controls="courseModalTrack">
+                                        <svg
+                                            width="50"
+                                            height="50"
+                                            viewBox="0 0 50 50"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                class="arrow-bg"
+                                                d="M25 0C11.1929 0 0 11.1929 0 25C0 38.8071 11.1929 50 25 50C38.8071 50 50 38.8071 50 25C50 11.1929 38.8071 0 25 0Z" />
+                                            <path
+                                                class="arrow"
+                                                d="M29.4782 38.0701L30.7872 36.7611C32.1059 35.4424 32.1059 33.3042 30.7872 31.9855L23.8034 25.0018L30.7888 18.0164C32.1075 16.6977 32.1075 14.5595 30.7888 13.2408L29.4799 11.9318C28.1612 10.6131 26.023 10.6131 24.7043 11.9318L14.023 22.6131C12.7043 23.9318 12.7043 26.0701 14.023 27.3888L24.7043 38.0701C26.023 39.3888 28.1612 39.3888 29.4799 38.0701H29.4782Z"
+                                                fill="#F7FAFE" />
+                                        </svg>
+                                    </button>
+                                    <button
+                                        class="btn gallery-btn gallery-btn_next modal-gallery__btn_next splide__arrow splide__arrow--next"
+                                        type="button"
+                                        aria-label="Next slide"
+                                        aria-controls="courseModalTrack">
+                                        <svg
+                                            width="50"
+                                            height="50"
+                                            viewBox="0 0 50 50"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                class="arrow-bg"
+                                                d="M25 50C38.8071 50 50 38.8071 50 25C50 11.1929 38.8071 0 25 0C11.1929 0 0 11.1929 0 25C0 38.8071 11.1929 50 25 50Z"
+                                                fill="#5D68ED" />
+                                            <path
+                                                class="arrow"
+                                                d="M20.5218 11.9299L19.2128 13.2389C17.8941 14.5576 17.8941 16.6958 19.2128 18.0145L26.1966 24.9982L19.2112 31.9836C17.8925 33.3023 17.8925 35.4405 19.2112 36.7592L20.5201 38.0682C21.8388 39.3869 23.977 39.3869 25.2957 38.0682L35.977 27.3869C37.2957 26.0682 37.2957 23.9299 35.977 22.6112L25.2957 11.9299C23.977 10.6112 21.8388 10.6112 20.5201 11.9299H20.5218Z"
+                                                fill="#F7FAFE" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script src="scripts/modalSlider.js"></script>
     </body>
 </html>

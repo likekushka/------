@@ -1,8 +1,7 @@
-.student-work-card {
+.project-card {
     width: 690px;
     height: 390px;
 
-    margin-right: 60px;
     padding: 25px 25px 30px;
 
     display: flex;
@@ -10,22 +9,36 @@
     justify-content: space-between;
 
     background-color: var(--color-pale-purple);
+    color: var(--color-black);
 
-    border-radius: 5px;
+    border-radius: 0.25rem;
 
     font-size: 1rem;
+
+    &:not(.student-work-card_carousel) {
+        cursor: pointer;
+        transition: transform 0.2s ease;
+    }
+
+    &:not(.student-work-card_carousel):hover {
+        transform: scale(1.01);
+    }
 }
 
-.student-work-card_small {
+.project-card_small {
     width: 580px;
     height: 325px;
 }
 
-.student-work-card__subtitle {
+.project-card_carousel {
+    margin-right: 60px;
+}
+
+.project-card__subtitle {
     font-size: 0.8em;
 }
 
-.student-work-card__body {
+.project-card__body {
     p {
         font-weight: bold;
 

@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+        <title>NetSchool: О нас</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+            rel="stylesheet" />
+        <script src="../node_modules/@splidejs/splide/dist/js/splide.min.js"></script>
+        <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="../node_modules/normalize.css/normalize.css" />
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="style/style.css" />
+    </head>
+    <body class="page-about">
+        <header class="header">
+            <div class="container-xxl header__container">
+                <nav class="navbar navbar-expand-lg">
+                    <div class="container-fluid">
+                        <a href="./index.html" class="navbar-brand"> <span class="net">Net</span>School</a>
+                        <div class="navbar-collapse collapse" id="headerNavbarContent">
+                            <ul class="navbar-nav justify-content-between ms-auto me-auto">
+                                <li class="nav-item">
+                                    <a href="./portfolio.html" class="nav-link">Портфолио</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="./team.html" class="nav-link">Команда</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="./about.html" class="nav-link disabled">О нас</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="./contacts.html" class="nav-link">Контакты</a>
+                                </li>
+                            </ul>
+                            <button class="btn nav-btn btn-primary btn-size_m">
+                                <a href="#registrationForm">Записаться</a>
+                            </button>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <section class="hero">
+                <div class="hero__container container-xxl">
+                    <h1 class="hero__title">Профессионалы команды NetSchool</h1>
+                    <p class="hero__text">
+                        В нашей школе за каждым учеником стоит команда профессионалов — методистов и преподавателей с
+                        богатым опытом в IT.
+                    </p>
+                    <button class="btn btn-primary btn-size_lg align-self-start">
+                        <a href="#registrationForm">Записаться бесплатно</a>
+                    </button>
+                </div>
+            </section>
+            <section id="registrationForm" class="registration media">
+                <div class="container-xxl registration-container">
+                    <div class="imgs-container registration__imgs-container">
+                        <img src="img/main/registration.png" alt="" class="img" />
+                        <img src="img/sub/registration.png" alt="" class="sub-img" />
+                    </div>
+                    <h2>Запишитесь на пробный урок</h2>
+                    <form class="registration__form form">
+                        <div class="inputs-container">
+                            <div class="form-floating">
+                                <input
+                                    type="text"
+                                    class="form-control registration__input"
+                                    id="nameInput"
+                                    placeholder="Имя" />
+                                <label for="nameInput" class="label">Имя</label>
+                            </div>
+                            <div class="form-floating">
+                                <input
+                                    type="text"
+                                    class="form-control registration__input"
+                                    id="surnameInput"
+                                    placeholder="Фамилия" />
+                                <label for="surnameInput" class="label">Фамилия</label>
+                            </div>
+                            <div class="form-floating">
+                                <input
+                                    type="tel"
+                                    class="form-control registration__input"
+                                    id="telInput"
+                                    placeholder="Номер телефона" />
+                                <label for="telInput" class="label">Номер телефона</label>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary registration__btn">Записаться</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="container-xxl footer__container">
+                <nav class="navbar navbar-expand-lg">
+                    <div class="container-fluid">
+                        <a href="./index.html" class="navbar-brand footer__brand">
+                            <span class="net">Net</span>School
+                        </a>
+                        <div class="navbar-collapse collapse" id="footerNavbarContent">
+                            <ul class="navbar-nav justify-content-between ms-auto">
+                                <li class="nav-item">
+                                    <a href="./portfolio.html" class="nav-link">Портфолио</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="./team.html" class="nav-link">Команда</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="./about.html" class="nav-link disabled">О нас</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="./contacts.html" class="nav-link">Контакты</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <p class="copyright">&copy; 2024 Все права защищены ООО “NetSchool”</p>
+            </div>
+        </footer>
+    </body>
+</html>

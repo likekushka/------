@@ -1,0 +1,32 @@
+$color-green: #b0ed69;
+$color-orange: #f2c370;
+$color-white: #f7fafe;
+$color-blue: #5d68ed;
+$color-black: #18181c;
+$color-light-purple: #c1b9fc;
+$color-purple: #d38bf1;
+$color-pale-purple: #ebecfe;
+
+$link-size: 1rem;
+$logo-size: 1.8rem;
+
+$h1-size: 3.2rem;
+$h2-size: 2.4rem;
+$h3-size: 1.2rem;
+$h4-size: 1rem;
+$text-24: 1.2rem;
+$text-20: 1rem;
+$text-18: 0.9rem;
+$text-16: 0.8rem;
+
+$title-lh: 1.1;
+$main-text-lh: 1.25;
+
+$header-height: 125px;
+
+$font-size: 20px;
+
+$img-path: "../img/";
+$index-hero: url("#{$img-path}hero/index_hero.png");
+$portfolio-hero: url("#{$img-path}hero/portfolio_hero.png");
+$team-hero: url("#{$img-path}hero/team_hero.png");

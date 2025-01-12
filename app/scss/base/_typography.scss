@@ -1,0 +1,38 @@
+h1,
+h2,
+h3 {
+    line-height: var(--title-lh);
+    font-weight: bold;
+
+    margin-bottom: 2.75rem;
+}
+
+@for $i from 1 through 4 {
+    h#{$i} {
+        font-size: var(--h#{$i}-size);
+    }
+}
+
+.text-24 {
+    font-size: var(--text-24);
+    line-height: var(--main-text-lh);
+}
+
+.text-18 {
+    font-size: var(--text-18);
+    line-height: 1.15;
+}
+
+.text-16 {
+    font-size: var(--text-16);
+    line-height: 1.1;
+}
+
+p {
+    margin-bottom: 0;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+}

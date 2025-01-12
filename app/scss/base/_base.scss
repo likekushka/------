@@ -1,29 +1,4 @@
-$color-green: #b0ed69;
-$color-orange: #f2c370;
-$color-white: #f7fafe;
-$color-blue: #5d68ed;
-$color-black: #18181c;
-$color-light-purple: #c1b9fc;
-$color-purple: #d38bf1;
-$color-pale-purple: #ebecfe;
-$link-size: 1rem;
-$logo-size: 1.8rem;
-
-$h1-size: 3.2rem;
-$h2-size: 2.4rem;
-$h3-size: 1.6rem;
-$h4-size: 1rem;
-$text-24: 1.2rem;
-$text-20: 1rem;
-$text-18: 0.9rem;
-$text-16: 0.8rem;
-
-$title-lh: 110%;
-$main-text-lh: 110%;
-
-$header-height: 125px;
-
-$font-size: 20px;
+@use "variables" as *;
 
 :root {
     --color-green: #{$color-green};
@@ -57,14 +32,35 @@ $font-size: 20px;
         font-size: 18px;
     }
 
-    @media screen and (max-width: 1600px) {
+    @media screen and (max-width: 1200px) {
         font-size: 16px;
     }
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+    height: 15px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--color-black);
 }
 
 body {
     font-family: "Mulish", sans-serif;
     font-weight: 500;
+    font-size: 1rem;
+    line-height: #{$main-text-lh};
     background-color: var(--color-white);
     color: var(--color-black);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+figure {
+    margin: 0;
 }

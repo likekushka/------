@@ -1,0 +1,69 @@
+@use "../base/variables" as *;
+@use "../mixins/set-page-theme" as *;
+
+.page-team {
+    .hero {
+        background-image: $team-hero;
+    }
+
+    @include set-page-theme($color-light-purple);
+}
+
+.ceo {
+    .imgs-container {
+        width: 488px;
+        height: 488px;
+    }
+}
+
+.position {
+    opacity: 0.75;
+    margin-top: 2.5rem;
+    padding-right: 30%;
+    text-align: start;
+}
+
+.media_left {
+    .position {
+        text-align: end;
+        padding-right: 0;
+        padding-left: 30%;
+    }
+}
+
+.position-img {
+    width: 265px;
+
+    right: -80px;
+    top: 5px;
+
+    transform: rotate(15deg);
+}
+
+.position-img_left {
+    left: -80px;
+
+    transform: rotate(-15deg);
+}
+
+.position-img_small {
+    width: 225px;
+
+    right: -120px;
+    top: 15px;
+
+    transform: rotate(10deg);
+
+    &.position-img_left {
+        left: -120px;
+        transform: rotate(-10deg);
+    }
+}
+
+.workers-list {
+    > * + * {
+        padding-top: 50px;
+        margin-top: 50px;
+        border-top: var(--color-pale-purple) solid 3px;
+    }
+}
