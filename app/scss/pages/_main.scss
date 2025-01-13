@@ -1,86 +1,10 @@
 @use "../base/variables" as *;
 @use "../mixins/set-page-theme" as *;
 
-$person-colors: $color-light-purple $color-green $color-blue $color-purple $color-orange $color-black;
-
 .page-main {
     @include set-page-theme($color-green);
 
     .hero {
         background-image: $index-hero;
     }
-}
-
-.review__title {
-    margin-bottom: 55px;
-}
-
-.review__container {
-    position: relative;
-}
-
-.review__track {
-    margin-bottom: 35px;
-}
-
-.review__carousel {
-    display: flex;
-    flex-wrap: nowrap;
-
-    margin-bottom: 35px;
-}
-
-.review-card {
-    @for $i from 1 through 18 {
-        &:nth-child(#{$i}) {
-            & path {
-                $color-index: ($i - 1) % 6 + 1;
-                fill: nth($person-colors, $color-index);
-            }
-        }
-    }
-}
-
-.review-card__reviewer {
-    display: grid;
-    grid-template-rows: 1fr auto;
-    grid-template-columns: auto 1fr;
-
-    column-gap: 10px;
-}
-
-.reviewer__img {
-    height: 50px;
-    width: 50px;
-    margin-bottom: 0;
-
-    grid-row: 1 / 3;
-}
-
-.review-card__name {
-    font-size: var(--text-20);
-    line-height: 110%;
-    margin-top: 2px;
-    margin-bottom: 5px;
-}
-
-.review-card__eval {
-    margin-bottom: 3px;
-}
-
-.courses__title {
-    margin-bottom: 55px;
-}
-
-.course-card__name {
-    font-size: var(--text-20);
-    font-weight: bold;
-    margin-bottom: 15px;
-}
-
-.course-card__img {
-    align-self: center;
-
-    display: flex;
-    align-items: center;
 }

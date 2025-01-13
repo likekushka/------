@@ -15,15 +15,15 @@
         <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="../node_modules/normalize.css/normalize.css" />
         <link rel="stylesheet" href="../node_modules/@splidejs/splide/dist/css/splide.min.css" />
-        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css" />
-        <link rel="stylesheet" href="style/style.css" />
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="style/style.min.css" />
     </head>
     <body class="page-main">
         <header class="header">
             <div class="container-xxl header__container">
                 <nav class="navbar navbar-expand-lg">
                     <div class="container-fluid">
-                        <a href="./index.html" class="navbar-brand"><span class="net">Net</span>School</a>
+                        <a href="index.html" class="navbar-brand"><span class="net">Net</span>School</a>
                         <div class="navbar-collapse collapse" id="headerNavbarContent">
                             <ul class="navbar-nav justify-content-between ms-auto me-auto">
                                 <li class="nav-item">
@@ -81,8 +81,8 @@
             <section class="review">
                 <div class="review__container container-xxl">
                     <h2 class="review__title">Отзывы</h2>
-                    <div class="slider-container splide" id="reviewSlider">
-                        <div class="splide__track review__track" id="reviewTrack">
+                    <div class="splide" id="reviewSlider">
+                        <div class="splide__track" id="reviewTrack">
                             <ul class="review__carousel cards-carousel splide__list">
                                 <li class="review-card custom-card splide__slide">
                                     <header class="review-card__reviewer card__header">
@@ -101,10 +101,10 @@
                                             </svg>
                                         </figure>
                                         <h4 class="review-card__name">Галина Бланка</h4>
-                                        <p class="review-card__eval text-16">Оценка: 8/10</p>
+                                        <p class="review-card__eval">Оценка: 8/10</p>
                                     </header>
                                     <div class="card__body">
-                                        <p class="review-card__text text-18">
+                                        <p class="review-card__text">
                                             "NetSchool — это находка для моего сына!
                                             <br /><br />
                                             Он всегда интересовался компьютерами, и благодаря курсам программирования
@@ -113,7 +113,39 @@
                                         </p>
                                     </div>
                                     <footer class="card__footer">
-                                        <p class="review-card__course">Python: От А до Я</p>
+                                        <p>Python: От А до Я</p>
+                                    </footer>
+                                </li>
+                                <li class="review-card custom-card splide__slide">
+                                    <header class="review-card__reviewer card__header">
+                                        <figure class="reviewer__img">
+                                            <svg
+                                                width="50"
+                                                height="50"
+                                                viewBox="0 0 50 50"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    fill-rule="evenodd"
+                                                    clip-rule="evenodd"
+                                                    d="M42.6777 7.32231C44.9736 9.61767 46.7762 12.2915 48.0353 15.2686C49.3387 18.3513 50 21.6252 50 25C50 28.3748 49.3393 31.6487 48.0353 34.7314C46.7756 37.7085 44.9736 40.3817 42.6777 42.6777C42.0514 43.304 41.3959 43.8924 40.7147 44.4441L40.7066 44.4505C38.8935 45.9184 36.8932 47.1203 34.7314 48.0347C31.6487 49.3381 28.3748 49.9994 25 49.9994C21.6252 49.9994 18.3513 49.3387 15.2686 48.0347C13.1074 47.1209 11.1065 45.9184 9.29343 44.4505L9.28526 44.4441C8.60412 43.8924 7.94863 43.304 7.32231 42.6777C5.02636 40.3817 3.22377 37.7085 1.96471 34.7314C0.661317 31.6487 0 28.3742 0 25C0 21.6258 0.661317 18.3513 1.96471 15.2686C3.22436 12.2915 5.02636 9.61826 7.32231 7.32231C9.61826 5.02636 12.2915 3.22377 15.2686 1.96471C18.3513 0.661317 21.6252 0 25 0C28.3748 0 31.6487 0.661317 34.7314 1.96471C37.7085 3.22436 40.3817 5.02636 42.6777 7.32231ZM41.5079 41.5073C43.6516 39.3629 45.3352 36.8664 46.5109 34.0864C47.728 31.209 48.3444 28.1509 48.3444 24.9994C48.3444 21.848 47.7274 18.7904 46.5103 15.913C45.3346 13.133 43.6516 10.6365 41.5073 8.49215C39.3629 6.34841 36.8664 4.66479 34.0864 3.48912C31.209 2.27204 28.1515 1.65504 25 1.65504C21.8485 1.65504 18.791 2.27204 15.9136 3.48912C13.1336 4.66479 10.6371 6.34783 8.49273 8.49215C6.34899 10.6365 4.66538 13.133 3.4897 15.913C2.27262 18.7904 1.65563 21.848 1.65563 24.9994C1.65563 28.1509 2.27262 31.2084 3.4897 34.0858C4.66538 36.8658 6.34841 39.3624 8.49273 41.5067C8.65777 41.6723 8.82572 41.8338 8.99543 41.9936C9.11381 38.4561 10.5461 35.1472 13.0613 32.632C15.6891 30.0042 19.1829 28.5568 22.8988 28.5568H27.1018C30.8183 28.5568 34.3115 30.0042 36.9393 32.632C39.4545 35.1472 40.8874 38.4561 41.0052 41.9936C41.1743 41.8338 41.3428 41.6723 41.5079 41.5073ZM16.1428 17.82C16.1428 12.9359 20.1166 8.96277 25 8.96277C29.8835 8.96277 33.8567 12.9359 33.8567 17.82C33.8567 22.7041 29.8841 26.6772 25 26.6772C20.116 26.6772 16.1428 22.7041 16.1428 17.82Z"
+                                                    fill="#C1B9FC" />
+                                            </svg>
+                                        </figure>
+                                        <h4 class="review-card__name">Сергей Юрин</h4>
+                                        <p class="review-card__eval">Оценка: 8/10</p>
+                                    </header>
+                                    <div class="card__body">
+                                        <p class="review-card__text">
+                                            Мы выбрали NetSchool за увлекательную подачу материала и поддержку
+                                            наставников.
+                                            <br /><br />
+                                            Моя дочь быстро втянулась в обучение, и я вижу, как она уверенно справляется
+                                            с задачами и получает удовольствие от процесса.
+                                        </p>
+                                    </div>
+                                    <footer class="card__footer">
+                                        <p>Roblox: Миллион в одном</p>
                                     </footer>
                                 </li>
                                 <li class="review-card custom-card splide__slide">
@@ -132,20 +164,20 @@
                                                     fill="#C1B9FC" />
                                             </svg>
                                         </figure>
-                                        <h4 class="review-card__name">Галина Бланка</h4>
-                                        <p class="review-card__eval text-16">Оценка: 8/10</p>
+                                        <h4 class="review-card__name">Елена Сутина</h4>
+                                        <p class="review-card__eval">Оценка: 8/10</p>
                                     </header>
                                     <div class="card__body">
-                                        <p class="review-card__text text-18">
-                                            "NetSchool — это находка для моего сына!
+                                        <p class="review-card__text">
+                                            "Спасибо NetSchool за возможность учиться программированию онлайн.
                                             <br /><br />
-                                            Он всегда интересовался компьютерами, и благодаря курсам программирования
-                                            его интерес превратился в реальное увлечение. Теперь Антон создает свои игры
-                                            и мечтает стать разработчиком!"
+                                            Мой сын заинтересовался IT, и теперь мечтает о профессии программиста. Курсы
+                                            построены таким образом, что ребенок получает знания через практику, и это
+                                            действительно работает!"
                                         </p>
                                     </div>
                                     <footer class="card__footer">
-                                        <p class="review-card__course">Python: От А до Я</p>
+                                        <p>Arduino: Мастер роботов</p>
                                     </footer>
                                 </li>
                                 <li class="review-card custom-card splide__slide">
@@ -164,20 +196,20 @@
                                                     fill="#C1B9FC" />
                                             </svg>
                                         </figure>
-                                        <h4 class="review-card__name">Галина Бланка</h4>
-                                        <p class="review-card__eval text-16">Оценка: 8/10</p>
+                                        <h4 class="review-card__name">Ольга Софьина</h4>
+                                        <p class="review-card__eval">Оценка: 10/10</p>
                                     </header>
                                     <div class="card__body">
-                                        <p class="review-card__text text-18">
-                                            "NetSchool — это находка для моего сына!
+                                        <p class="review-card__text">
+                                            "В NetSchool мою дочь не просто учат писать код — здесь развивают её
+                                            творческие и аналитические навыки.
                                             <br /><br />
-                                            Он всегда интересовался компьютерами, и благодаря курсам программирования
-                                            его интерес превратился в реальное увлечение. Теперь Антон создает свои игры
-                                            и мечтает стать разработчиком!"
+                                            Она с удовольствием занимается созданием сайтов и игр, а я рада видеть её
+                                            успехи."
                                         </p>
                                     </div>
                                     <footer class="card__footer">
-                                        <p class="review-card__course">Python: От А до Я</p>
+                                        <p>Веб-дизайн: Сайт мечты</p>
                                     </footer>
                                 </li>
                                 <li class="review-card custom-card splide__slide">
@@ -196,20 +228,20 @@
                                                     fill="#C1B9FC" />
                                             </svg>
                                         </figure>
-                                        <h4 class="review-card__name">Галина Бланка</h4>
-                                        <p class="review-card__eval text-16">Оценка: 8/10</p>
+                                        <h4 class="review-card__name">Александра Мишина</h4>
+                                        <p class="review-card__eval">Оценка: 9/10</p>
                                     </header>
                                     <div class="card__body">
-                                        <p class="review-card__text text-18">
-                                            "NetSchool — это находка для моего сына!
+                                        <p class="review-card__text">
+                                            "Мы выбрали NetSchool за профессиональный подход к обучению и удобный формат
+                                            занятий.
                                             <br /><br />
-                                            Он всегда интересовался компьютерами, и благодаря курсам программирования
-                                            его интерес превратился в реальное увлечение. Теперь Антон создает свои игры
-                                            и мечтает стать разработчиком!"
+                                            Мой сын с удовольствием осваивает новые темы, активно участвует в уроках и
+                                            показывает отличные результаты."
                                         </p>
                                     </div>
                                     <footer class="card__footer">
-                                        <p class="review-card__course">Python: От А до Я</p>
+                                        <p>Python: От А до Я</p>
                                     </footer>
                                 </li>
                                 <li class="review-card custom-card splide__slide">
@@ -224,56 +256,24 @@
                                                 <path
                                                     fill-rule="evenodd"
                                                     clip-rule="evenodd"
-                                                    d="M42.6777 7.32231C44.9736 9.61767 46.7762 12.2915 48.0353 15.2686C49.3387 18.3513 50 21.6252 50 25C50 28.3748 49.3393 31.6487 48.0353 34.7314C46.7756 37.7085 44.9736 40.3817 42.6777 42.6777C42.0514 43.304 41.3959 43.8924 40.7147 44.4441L40.7066 44.4505C38.8935 45.9184 36.8932 47.1203 34.7314 48.0347C31.6487 49.3381 28.3748 49.9994 25 49.9994C21.6252 49.9994 18.3513 49.3387 15.2686 48.0347C13.1074 47.1209 11.1065 45.9184 9.29343 44.4505L9.28526 44.4441C8.60412 43.8924 7.94863 43.304 7.32231 42.6777C5.02636 40.3817 3.22377 37.7085 1.96471 34.7314C0.661317 31.6487 0 28.3742 0 25C0 21.6258 0.661317 18.3513 1.96471 15.2686C3.22436 12.2915 5.02636 9.61826 7.32231 7.32231C9.61826 5.02636 12.2915 3.22377 15.2686 1.96471C18.3513 0.661317 21.6252 0 25 0C28.3748 0 31.6487 0.661317 34.7314 1.96471C37.7085 3.22436 40.3817 5.02636 42.6777 7.32231ZM41.5079 41.5073C43.6516 39.3629 45.3352 36.8664 46.5109 34.0864C47.728 31.209 48.3444 28.1509 48.3444 24.9994C48.3444 21.848 47.7274 18.7904 46.5103 15.913C45.3346 13.133 43.6516 10.6365 41.5073 8.49215C39.3629 6.34841 36.8664 4.66479 34.0864 3.48912C31.209 2.27204 28.1515 1.65504 25 1.65504C21.8485 1.65504 18.791 2.27204 15.9136 3.48912C13.1336 4.66479 10.6371 6.34783 8.49273 8.49215C6.34899 10.6365 4.66538 13.133 3.4897 15.913C2.27262 18.7904 1.65563 21.848 1.65563 24.9994C1.65563 28.1509 2.27262 31.2084 3.4897 34.0858C4.66538 36.8658 6.34841 39.3624 8.49273 41.5067C8.65777 41.6723 8.82572 41.8338 8.99543 41.9936C9.11381 38.4561 10.5461 35.1472 13.0613 32.632C15.6891 30.0042 19.1829 28.5568 22.8988 28.5568H27.1018C30.8183 28.5568 34.3115 30.0042 36.9393 32.632C39.4545 35.1472 40.8874 38.4561 41.0052 41.9936C41.1743 41.8338 41.3428 41.6723 41.5079 41.5073ZM16 17.8553C16 12.9723 19.9723 9 24.8553 9C29.7377 9 33.71 12.9723 33.71 17.8553V26.7106H16V17.8553Z"
+                                                    d="M42.6777 7.32231C44.9736 9.61767 46.7762 12.2915 48.0353 15.2686C49.3387 18.3513 50 21.6252 50 25C50 28.3748 49.3393 31.6487 48.0353 34.7314C46.7756 37.7085 44.9736 40.3817 42.6777 42.6777C42.0514 43.304 41.3959 43.8924 40.7147 44.4441L40.7066 44.4505C38.8935 45.9184 36.8932 47.1203 34.7314 48.0347C31.6487 49.3381 28.3748 49.9994 25 49.9994C21.6252 49.9994 18.3513 49.3387 15.2686 48.0347C13.1074 47.1209 11.1065 45.9184 9.29343 44.4505L9.28526 44.4441C8.60412 43.8924 7.94863 43.304 7.32231 42.6777C5.02636 40.3817 3.22377 37.7085 1.96471 34.7314C0.661317 31.6487 0 28.3742 0 25C0 21.6258 0.661317 18.3513 1.96471 15.2686C3.22436 12.2915 5.02636 9.61826 7.32231 7.32231C9.61826 5.02636 12.2915 3.22377 15.2686 1.96471C18.3513 0.661317 21.6252 0 25 0C28.3748 0 31.6487 0.661317 34.7314 1.96471C37.7085 3.22436 40.3817 5.02636 42.6777 7.32231ZM41.5079 41.5073C43.6516 39.3629 45.3352 36.8664 46.5109 34.0864C47.728 31.209 48.3444 28.1509 48.3444 24.9994C48.3444 21.848 47.7274 18.7904 46.5103 15.913C45.3346 13.133 43.6516 10.6365 41.5073 8.49215C39.3629 6.34841 36.8664 4.66479 34.0864 3.48912C31.209 2.27204 28.1515 1.65504 25 1.65504C21.8485 1.65504 18.791 2.27204 15.9136 3.48912C13.1336 4.66479 10.6371 6.34783 8.49273 8.49215C6.34899 10.6365 4.66538 13.133 3.4897 15.913C2.27262 18.7904 1.65563 21.848 1.65563 24.9994C1.65563 28.1509 2.27262 31.2084 3.4897 34.0858C4.66538 36.8658 6.34841 39.3624 8.49273 41.5067C8.65777 41.6723 8.82572 41.8338 8.99543 41.9936C9.11381 38.4561 10.5461 35.1472 13.0613 32.632C15.6891 30.0042 19.1829 28.5568 22.8988 28.5568H27.1018C30.8183 28.5568 34.3115 30.0042 36.9393 32.632C39.4545 35.1472 40.8874 38.4561 41.0052 41.9936C41.1743 41.8338 41.3428 41.6723 41.5079 41.5073ZM16.1428 17.82C16.1428 12.9359 20.1166 8.96277 25 8.96277C29.8835 8.96277 33.8567 12.9359 33.8567 17.82C33.8567 22.7041 29.8841 26.6772 25 26.6772C20.116 26.6772 16.1428 22.7041 16.1428 17.82Z"
                                                     fill="#C1B9FC" />
                                             </svg>
                                         </figure>
-                                        <h4 class="review-card__name">Галина Бланка</h4>
-                                        <p class="review-card__eval text-16">Оценка: 8/10</p>
+                                        <h4 class="review-card__name">Иван Смирнов</h4>
+                                        <p class="review-card__eval">Оценка: 9/10</p>
                                     </header>
                                     <div class="card__body">
-                                        <p class="review-card__text text-18">
-                                            "NetSchool — это находка для моего сына!
+                                        <p class="review-card__text">
+                                            "Мы выбрали NetSchool за индивидуальный подход и современную методику
+                                            преподавания.
                                             <br /><br />
-                                            Он всегда интересовался компьютерами, и благодаря курсам программирования
-                                            его интерес превратился в реальное увлечение. Теперь Антон создает свои игры
-                                            и мечтает стать разработчиком!"
+                                            Моя дочь всегда ждёт новые уроки с нетерпением, радуется успехам и уже
+                                            строит планы на будущее."
                                         </p>
                                     </div>
                                     <footer class="card__footer">
-                                        <p class="review-card__course">Python: От А до Я</p>
-                                    </footer>
-                                </li>
-                                <li class="review-card custom-card splide__slide">
-                                    <header class="review-card__reviewer card__header">
-                                        <figure class="reviewer__img">
-                                            <svg
-                                                width="50"
-                                                height="50"
-                                                viewBox="0 0 50 50"
-                                                fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    fill-rule="evenodd"
-                                                    clip-rule="evenodd"
-                                                    d="M42.6777 7.32231C44.9736 9.61767 46.7762 12.2915 48.0353 15.2686C49.3387 18.3513 50 21.6252 50 25C50 28.3748 49.3393 31.6487 48.0353 34.7314C46.7756 37.7085 44.9736 40.3817 42.6777 42.6777C42.0514 43.304 41.3959 43.8924 40.7147 44.4441L40.7066 44.4505C38.8935 45.9184 36.8932 47.1203 34.7314 48.0347C31.6487 49.3381 28.3748 49.9994 25 49.9994C21.6252 49.9994 18.3513 49.3387 15.2686 48.0347C13.1074 47.1209 11.1065 45.9184 9.29343 44.4505L9.28526 44.4441C8.60412 43.8924 7.94863 43.304 7.32231 42.6777C5.02636 40.3817 3.22377 37.7085 1.96471 34.7314C0.661317 31.6487 0 28.3742 0 25C0 21.6258 0.661317 18.3513 1.96471 15.2686C3.22436 12.2915 5.02636 9.61826 7.32231 7.32231C9.61826 5.02636 12.2915 3.22377 15.2686 1.96471C18.3513 0.661317 21.6252 0 25 0C28.3748 0 31.6487 0.661317 34.7314 1.96471C37.7085 3.22436 40.3817 5.02636 42.6777 7.32231ZM41.5079 41.5073C43.6516 39.3629 45.3352 36.8664 46.5109 34.0864C47.728 31.209 48.3444 28.1509 48.3444 24.9994C48.3444 21.848 47.7274 18.7904 46.5103 15.913C45.3346 13.133 43.6516 10.6365 41.5073 8.49215C39.3629 6.34841 36.8664 4.66479 34.0864 3.48912C31.209 2.27204 28.1515 1.65504 25 1.65504C21.8485 1.65504 18.791 2.27204 15.9136 3.48912C13.1336 4.66479 10.6371 6.34783 8.49273 8.49215C6.34899 10.6365 4.66538 13.133 3.4897 15.913C2.27262 18.7904 1.65563 21.848 1.65563 24.9994C1.65563 28.1509 2.27262 31.2084 3.4897 34.0858C4.66538 36.8658 6.34841 39.3624 8.49273 41.5067C8.65777 41.6723 8.82572 41.8338 8.99543 41.9936C9.11381 38.4561 10.5461 35.1472 13.0613 32.632C15.6891 30.0042 19.1829 28.5568 22.8988 28.5568H27.1018C30.8183 28.5568 34.3115 30.0042 36.9393 32.632C39.4545 35.1472 40.8874 38.4561 41.0052 41.9936C41.1743 41.8338 41.3428 41.6723 41.5079 41.5073ZM16 17.8553C16 12.9723 19.9723 9 24.8553 9C29.7377 9 33.71 12.9723 33.71 17.8553V26.7106H16V17.8553Z"
-                                                    fill="#C1B9FC" />
-                                            </svg>
-                                        </figure>
-                                        <h4 class="review-card__name">Галина Бланка</h4>
-                                        <p class="review-card__eval text-16">Оценка: 8/10</p>
-                                    </header>
-                                    <div class="card__body">
-                                        <p class="review-card__text text-18">
-                                            "NetSchool — это находка для моего сына!
-                                            <br /><br />
-                                            Он всегда интересовался компьютерами, и благодаря курсам программирования
-                                            его интерес превратился в реальное увлечение. Теперь Антон создает свои игры
-                                            и мечтает стать разработчиком!"
-                                        </p>
-                                    </div>
-                                    <footer class="card__footer">
-                                        <p class="review-card__course">Python: От А до Я</p>
+                                        <p>Python: От А до Я</p>
                                     </footer>
                                 </li>
                             </ul>
@@ -341,9 +341,7 @@
                                 </p>
                             </header>
                             <div class="card__body">
-                                <figure class="course-card__img">
-                                    <img src="img/courses/python.png" alt="Python Logo" class="img" />
-                                </figure>
+                                <img src="img/courses/python.png" alt="Python Logo" class="img" />
                             </div>
                             <footer class="card__footer">
                                 <p class="course-card__duration">32 недели / 32 занятия</p>
@@ -362,9 +360,7 @@
                                 </p>
                             </header>
                             <div class="card__body">
-                                <figure class="course-card__img">
-                                    <img src="img/courses/scratch.png" alt="Scratch Logo" class="img" />
-                                </figure>
+                                <img src="img/courses/scratch.png" alt="Scratch Logo" class="img" />
                             </div>
                             <footer class="card__footer">
                                 <p class="course-card__duration">16 недель / 16 занятий</p>
@@ -383,9 +379,7 @@
                                 </p>
                             </header>
                             <div class="card__body">
-                                <figure class="course-card__img">
-                                    <img src="img/courses/web.png" alt="Web Logo" class="img" />
-                                </figure>
+                                <img src="img/courses/web.png" alt="Web Logo" class="img" />
                             </div>
                             <footer class="card__footer">
                                 <p class="course-card__duration">16 недель / 16 занятий</p>
@@ -403,9 +397,7 @@
                                 </p>
                             </header>
                             <div class="card__body">
-                                <figure class="course-card__img">
-                                    <img src="img/courses/roblox.png" alt="Roblox Logo" class="img" />
-                                </figure>
+                                <img src="img/courses/roblox.png" alt="Roblox Logo" class="img" />
                             </div>
                             <footer class="card__footer">
                                 <p class="course-card__duration">20 недель / 20 занятий</p>
@@ -424,9 +416,7 @@
                                 </p>
                             </header>
                             <div class="card__body">
-                                <figure class="course-card__img">
-                                    <img src="img/courses/python.png" alt="Python Logo" class="img" />
-                                </figure>
+                                <img src="img/courses/python.png" alt="Python Logo" class="img" />
                             </div>
                             <footer class="card__footer">
                                 <p class="course-card__duration">32 недели / 32 занятия</p>
@@ -445,9 +435,7 @@
                                 </p>
                             </header>
                             <div class="card__body">
-                                <figure class="course-card__img">
-                                    <img src="img/courses/scratch.png" alt="Scratch Logo" class="img" />
-                                </figure>
+                                <img src="img/courses/scratch.png" alt="Scratch Logo" class="img" />
                             </div>
                             <footer class="card__footer">
                                 <p class="course-card__duration">16 недель / 16 занятий</p>
@@ -466,9 +454,7 @@
                                 </p>
                             </header>
                             <div class="card__body">
-                                <figure class="course-card__img">
-                                    <img src="img/courses/web.png" alt="Web Logo" class="img" />
-                                </figure>
+                                <img src="img/courses/web.png" alt="Web Logo" class="img" />
                             </div>
                             <footer class="card__footer">
                                 <p class="course-card__duration">16 недель / 16 занятий</p>
@@ -486,9 +472,7 @@
                                 </p>
                             </header>
                             <div class="card__body">
-                                <figure class="course-card__img">
-                                    <img src="img/courses/roblox.png" alt="Roblox Logo" class="img" />
-                                </figure>
+                                <img src="img/courses/roblox.png" alt="Roblox Logo" class="img" />
                             </div>
                             <footer class="card__footer">
                                 <p class="course-card__duration">20 недель / 20 занятий</p>
@@ -553,14 +537,144 @@
                     </form>
                 </div>
             </section>
+            <section class="modal fade" id="courseModal" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <header class="modal__header tti-container">
+                            <h1 class="modal__title title1">Python: От А до Я</h1>
+                            <h6 class="modal__subtitle">Для детей от 8 до 17 лет</h6>
+                            <button
+                                type="button"
+                                class="btn-close modal-btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </header>
+                        <div class="modal-body">
+                            <div class="modal__text">
+                                <p>
+                                    На этом курсе ученики познакомятся с основами одного из самых востребованных языков
+                                    программирования — Python. Курс подойдёт как для новичков, так и для тех, кто уже
+                                    делал первые шаги в кодировании.
+                                </p>
+                                <strong>Что ждет ребенка на курсе:</strong>
+                                <ul class="doted-list">
+                                    <li>Знакомство с основами программирования на языке Python</li>
+                                    <li>Создание проектов для решения повседневных задач</li>
+                                    <li>Создание собственных игр</li>
+                                </ul>
+                                <p>
+                                    По окончании курса ваш ребенок будет уметь уверенно и, самое главное, самостоятельно
+                                    писать код, освоит навыки логического мышления и получит первый опыт в
+                                    программировании и знания, которые в дальнейшем могут помочь ему в получении
+                                    профессии.
+                                </p>
+                            </div>
+                            <div class="modal__gallery">
+                                <h3 class="modal-gallery__title">Работы наших учеников</h3>
+                                <div class="splide" id="modalSlider">
+                                    <div class="splide__track modal-gallery__track" id="modalTrack">
+                                        <ul class="splide__list">
+                                            <li
+                                                class="project-card project-card_small project-card_carousel splide__slide">
+                                                <header class="project-card__header">
+                                                    <h4 class="project-card__title">Софья Рыбина</h4>
+                                                    <h6 class="project-card__subtitle">10 лет</h6>
+                                                </header>
+                                                <div class="project-card__body">
+                                                    <p>Игра “Путешествие по джунглям"</p>
+                                                    <p>Scratch: Создатель игр</p>
+                                                </div>
+                                            </li>
+                                            <li
+                                                class="project-card project-card_small project-card_carousel splide__slide">
+                                                <header class="project-card__header">
+                                                    <h4 class="project-card__title">Софья Рыбина</h4>
+                                                    <h6 class="project-card__subtitle">10 лет</h6>
+                                                </header>
+                                                <div class="project-card__body">
+                                                    <p>Игра “Путешествие по джунглям"</p>
+                                                    <p>Scratch: Создатель игр</p>
+                                                </div>
+                                            </li>
+                                            <li
+                                                class="project-card project-card_small project-card_carousel splide__slide">
+                                                <header class="project-card__header">
+                                                    <h4 class="project-card__title">Софья Рыбина</h4>
+                                                    <h6 class="project-card__subtitle">10 лет</h6>
+                                                </header>
+                                                <div class="project-card__body">
+                                                    <p>Игра “Путешествие по джунглям"</p>
+                                                    <p>Scratch: Создатель игр</p>
+                                                </div>
+                                            </li>
+                                            <li
+                                                class="project-card project-card_small project-card_carousel splide__slide">
+                                                <header class="project-card__header">
+                                                    <h4 class="project-card__title">Софья Рыбина</h4>
+                                                    <h6 class="project-card__subtitle">10 лет</h6>
+                                                </header>
+                                                <div class="project-card__body">
+                                                    <p>Игра “Путешествие по джунглям"</p>
+                                                    <p>Scratch: Создатель игр</p>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="splide__arrows splide__arrows--ltr">
+                                        <button
+                                            class="btn gallery-btn gallery-btn_prev modal-gallery__btn_prev splide__arrow splide__arrow--prev"
+                                            type="button"
+                                            aria-label="Previous slide"
+                                            aria-controls="courseModalTrack">
+                                            <svg
+                                                width="50"
+                                                height="50"
+                                                viewBox="0 0 50 50"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    class="arrow-bg"
+                                                    d="M25 0C11.1929 0 0 11.1929 0 25C0 38.8071 11.1929 50 25 50C38.8071 50 50 38.8071 50 25C50 11.1929 38.8071 0 25 0Z" />
+                                                <path
+                                                    class="arrow"
+                                                    d="M29.4782 38.0701L30.7872 36.7611C32.1059 35.4424 32.1059 33.3042 30.7872 31.9855L23.8034 25.0018L30.7888 18.0164C32.1075 16.6977 32.1075 14.5595 30.7888 13.2408L29.4799 11.9318C28.1612 10.6131 26.023 10.6131 24.7043 11.9318L14.023 22.6131C12.7043 23.9318 12.7043 26.0701 14.023 27.3888L24.7043 38.0701C26.023 39.3888 28.1612 39.3888 29.4799 38.0701H29.4782Z"
+                                                    fill="#F7FAFE" />
+                                            </svg>
+                                        </button>
+                                        <button
+                                            class="btn gallery-btn gallery-btn_next modal-gallery__btn_next splide__arrow splide__arrow--next"
+                                            type="button"
+                                            aria-label="Next slide"
+                                            aria-controls="courseModalTrack">
+                                            <svg
+                                                width="50"
+                                                height="50"
+                                                viewBox="0 0 50 50"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    class="arrow-bg"
+                                                    d="M25 50C38.8071 50 50 38.8071 50 25C50 11.1929 38.8071 0 25 0C11.1929 0 0 11.1929 0 25C0 38.8071 11.1929 50 25 50Z"
+                                                    fill="#5D68ED" />
+                                                <path
+                                                    class="arrow"
+                                                    d="M20.5218 11.9299L19.2128 13.2389C17.8941 14.5576 17.8941 16.6958 19.2128 18.0145L26.1966 24.9982L19.2112 31.9836C17.8925 33.3023 17.8925 35.4405 19.2112 36.7592L20.5201 38.0682C21.8388 39.3869 23.977 39.3869 25.2957 38.0682L35.977 27.3869C37.2957 26.0682 37.2957 23.9299 35.977 22.6112L25.2957 11.9299C23.977 10.6112 21.8388 10.6112 20.5201 11.9299H20.5218Z"
+                                                    fill="#F7FAFE" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
         <footer class="footer">
             <div class="container-xxl footer__container">
                 <nav class="navbar navbar-expand-lg">
                     <div class="container-fluid">
-                        <a href="./index.html" class="navbar-brand footer__brand">
-                            <span class="net">Net</span>School
-                        </a>
+                        <a href="index.html" class="navbar-brand footer__brand"> <span class="net">Net</span>School </a>
                         <div class="navbar-collapse collapse" id="footerNavbarContent">
                             <ul class="navbar-nav justify-content-between ms-auto">
                                 <li class="nav-item">
@@ -582,133 +696,6 @@
                 <p class="copyright">&copy; 2024 Все права защищены ООО “NetSchool”</p>
             </div>
         </footer>
-        <section class="modal fade" id="courseModal" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <header class="modal__header tti-container">
-                        <h1 class="modal__title title1">Python: От А до Я</h1>
-                        <h6 class="modal__subtitle">Для детей от 8 до 17 лет</h6>
-                        <button
-                            type="button"
-                            class="btn-close modal-btn-close"
-                            data-bs-dismiss="modal"
-                            aria-label="Close"></button>
-                    </header>
-                    <div class="modal-body">
-                        <div class="modal__text">
-                            <p>
-                                На этом курсе ученики познакомятся с основами одного из самых востребованных языков
-                                программирования — Python. Курс подойдёт как для новичков, так и для тех, кто уже делал
-                                первые шаги в кодировании.
-                            </p>
-                            <strong>Что ждет ребенка на курсе:</strong>
-                            <ul class="doted-list">
-                                <li>Знакомство с основами программирования на языке Python</li>
-                                <li>Создание проектов для решения повседневных задач</li>
-                                <li>Создание собственных игр</li>
-                            </ul>
-                            <p>
-                                По окончании курса ваш ребенок будет уметь уверенно и, самое главное, самостоятельно
-                                писать код, освоит навыки логического мышления и получит первый опыт в программировании
-                                и знания, которые в дальнейшем могут помочь ему в получении профессии.
-                            </p>
-                        </div>
-                        <div class="modal__gallery">
-                            <h3 class="modal-gallery__title">Работы наших учеников</h3>
-                            <div class="slider-container splide" id="modalSlider">
-                                <div class="splide__track modal-gallery__track" id="modalTrack">
-                                    <ul class="modal-gallery__carousel splide__list">
-                                        <li class="project-card project-card_small project-card_carousel splide__slide">
-                                            <header class="project-card__header">
-                                                <h4 class="project-card__title">Софья Рыбина</h4>
-                                                <h6 class="project-card__subtitle">10 лет</h6>
-                                            </header>
-                                            <div class="project-card__body">
-                                                <p>Игра “Путешествие по джунглям"</p>
-                                                <p>Scratch: Создатель игр</p>
-                                            </div>
-                                        </li>
-                                        <li class="project-card project-card_small project-card_carousel splide__slide">
-                                            <header class="project-card__header">
-                                                <h4 class="project-card__title">Софья Рыбина</h4>
-                                                <h6 class="project-card__subtitle">10 лет</h6>
-                                            </header>
-                                            <div class="project-card__body">
-                                                <p>Игра “Путешествие по джунглям"</p>
-                                                <p>Scratch: Создатель игр</p>
-                                            </div>
-                                        </li>
-                                        <li class="project-card project-card_small project-card_carousel splide__slide">
-                                            <header class="project-card__header">
-                                                <h4 class="project-card__title">Софья Рыбина</h4>
-                                                <h6 class="project-card__subtitle">10 лет</h6>
-                                            </header>
-                                            <div class="project-card__body">
-                                                <p>Игра “Путешествие по джунглям"</p>
-                                                <p>Scratch: Создатель игр</p>
-                                            </div>
-                                        </li>
-                                        <li class="project-card project-card_small project-card_carousel splide__slide">
-                                            <header class="project-card__header">
-                                                <h4 class="project-card__title">Софья Рыбина</h4>
-                                                <h6 class="project-card__subtitle">10 лет</h6>
-                                            </header>
-                                            <div class="project-card__body">
-                                                <p>Игра “Путешествие по джунглям"</p>
-                                                <p>Scratch: Создатель игр</p>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="splide__arrows splide__arrows--ltr">
-                                    <button
-                                        class="btn gallery-btn gallery-btn_prev modal-gallery__btn_prev splide__arrow splide__arrow--prev"
-                                        type="button"
-                                        aria-label="Previous slide"
-                                        aria-controls="courseModalTrack">
-                                        <svg
-                                            width="50"
-                                            height="50"
-                                            viewBox="0 0 50 50"
-                                            fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                class="arrow-bg"
-                                                d="M25 0C11.1929 0 0 11.1929 0 25C0 38.8071 11.1929 50 25 50C38.8071 50 50 38.8071 50 25C50 11.1929 38.8071 0 25 0Z" />
-                                            <path
-                                                class="arrow"
-                                                d="M29.4782 38.0701L30.7872 36.7611C32.1059 35.4424 32.1059 33.3042 30.7872 31.9855L23.8034 25.0018L30.7888 18.0164C32.1075 16.6977 32.1075 14.5595 30.7888 13.2408L29.4799 11.9318C28.1612 10.6131 26.023 10.6131 24.7043 11.9318L14.023 22.6131C12.7043 23.9318 12.7043 26.0701 14.023 27.3888L24.7043 38.0701C26.023 39.3888 28.1612 39.3888 29.4799 38.0701H29.4782Z"
-                                                fill="#F7FAFE" />
-                                        </svg>
-                                    </button>
-                                    <button
-                                        class="btn gallery-btn gallery-btn_next modal-gallery__btn_next splide__arrow splide__arrow--next"
-                                        type="button"
-                                        aria-label="Next slide"
-                                        aria-controls="courseModalTrack">
-                                        <svg
-                                            width="50"
-                                            height="50"
-                                            viewBox="0 0 50 50"
-                                            fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                class="arrow-bg"
-                                                d="M25 50C38.8071 50 50 38.8071 50 25C50 11.1929 38.8071 0 25 0C11.1929 0 0 11.1929 0 25C0 38.8071 11.1929 50 25 50Z"
-                                                fill="#5D68ED" />
-                                            <path
-                                                class="arrow"
-                                                d="M20.5218 11.9299L19.2128 13.2389C17.8941 14.5576 17.8941 16.6958 19.2128 18.0145L26.1966 24.9982L19.2112 31.9836C17.8925 33.3023 17.8925 35.4405 19.2112 36.7592L20.5201 38.0682C21.8388 39.3869 23.977 39.3869 25.2957 38.0682L35.977 27.3869C37.2957 26.0682 37.2957 23.9299 35.977 22.6112L25.2957 11.9299C23.977 10.6112 21.8388 10.6112 20.5201 11.9299H20.5218Z"
-                                                fill="#F7FAFE" />
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
         <script src="scripts/reviewSlider.js"></script>
         <script src="scripts/modalSlider.js"></script>
     </body>

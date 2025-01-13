@@ -1,10 +1,17 @@
+@use "mixins/_typography" as *;
+
 h1,
 h2,
-h3 {
+h3,
+h4 {
     line-height: var(--title-lh);
     font-weight: bold;
 
     margin-bottom: 2.75rem;
+}
+
+h4 {
+    margin-bottom: 0;
 }
 
 @for $i from 1 through 4 {
@@ -14,18 +21,19 @@ h3 {
 }
 
 .text-24 {
-    font-size: var(--text-24);
-    line-height: var(--main-text-lh);
+    @include text-24;
+}
+
+.text-20 {
+    @include text-20;
 }
 
 .text-18 {
-    font-size: var(--text-18);
-    line-height: 1.15;
+    @include text-18;
 }
 
 .text-16 {
-    font-size: var(--text-16);
-    line-height: 1.1;
+    @include text-16;
 }
 
 p {

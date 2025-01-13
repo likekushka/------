@@ -1,0 +1,19 @@
+@mixin text-24 {
+    font-size: var(--text-24);
+    line-height: var(--main-text-lh);
+}
+
+@mixin text-20 {
+    font-size: var(--text-20);
+    line-height: var(--main-text-lh);
+}
+
+@mixin text-18 {
+    font-size: var(--text-18);
+    line-height: 1.15;
+}
+
+@mixin text-16 {
+    font-size: var(--text-16);
+    line-height: 1.1;
+}
